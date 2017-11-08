@@ -118,8 +118,8 @@ public:
 
 	void start() {
 		boost::asio::async_read(socket_,
-								boost::asio::buffer(nickname_, nickname_.size()),
-								strand_.wrap(boost::bind(&personInRoom::nicknameHandler, shared_from_this(), _1)));
+						boost::asio::buffer(nickname_, nickname_.size()),
+						strand_.wrap(boost::bind(&personInRoom::nicknameHandler, shared_from_this(), _1)));
 	}
 
 	void onMessage(std::array<char, MAX_IP_PACK_SIZE>& msg) {
