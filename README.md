@@ -11,3 +11,16 @@ The chat room can perform the following functions:
 5.	The server can be easily configured with multiple threads. Number of threads is hardcoded in the server code just for demonstration purpose. For production use, the number of worker threads need a config file entry.
 6.	For Linux system, set cpu affinity to threads in pool is also demonstrated.
 7.	Tested across Windows and Linux.
+
+# example
+starts server on a home computer, with only one room listening on port 8888
+>$./chat_server 8888
+
+starts 3 clients on another home computer, all connect to the chat_server which is on box 192.168.1.4.
+
+./chat_client Botao 192.168.1.4 8888
+./chat_client Tom 192.168.1.4 8888
+./chat_client Mike 192.168.1.4 8888
+
+The type in message and console history is like this:
+![image](https://github.com/botaojia/chat/blob/master/example.png)
