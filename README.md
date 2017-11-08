@@ -18,9 +18,20 @@ starts server on a home computer, with only one room listening on port 8888
 
 starts 3 clients on another home computer, all connect to the chat_server which is on box 192.168.1.4.
 
-./chat_client Botao 192.168.1.4 8888
-./chat_client Tom 192.168.1.4 8888
-./chat_client Mike 192.168.1.4 8888
+first starts client Botao:
+>$./chat_client Botao 192.168.1.4 8888
+
+After a few typing messages, starts client Tom:
+>$./chat_client Tom 192.168.1.4 8888
+
+Finally starts client Mike:
+>$./chat_client Mike 192.168.1.4 8888
 
 The type in message and console history is like this:
 ![image](https://github.com/botaojia/chat/blob/master/example.png)
+
+The chat_server can support multiple room like this:
+>$./chat_server 8888 9999
+
+now clients can select which room to join based on port numbers.
+
