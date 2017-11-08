@@ -126,8 +126,7 @@ int main(int argc, char* argv[])
         while (true)
         {
             memset(msg.data(), '\0', msg.size());
-            if (!std::cin.getline(msg.data(),
-                    MAX_IP_PACK_SIZE - PADDING - MAX_NICKNAME))
+            if (!std::cin.getline(msg.data(), MAX_IP_PACK_SIZE - PADDING - MAX_NICKNAME))
             {
                 std::cin.clear(); //clean up error bit and try to finish reading
             }
