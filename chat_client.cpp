@@ -131,7 +131,6 @@ int main(int argc, char* argv[])
             {
                 std::cin.clear(); //clean up error bit and try to finish reading
             }
-            std::cout << "finished getline " << msg.data() << std::endl;
             cli.write(msg);
         }
 
