@@ -1,7 +1,7 @@
 # chat
 C++ boost::asio implementation of multi-threaded chat server, and client
 
-I implemented a console mode chat room using C++11 features and boost::asio asynchronous library. The chat room consists of a chat server and multiple chat clients. The makefile will generate 2 binaries, chat_server and chat_client.
+I implemented a console mode chat room using C++11 features and boost::asio asynchronous library. The chat room consists of a chat server and multiple chat clients. The makefile will generate 2 binaries, chat_server and chat_client. The boost::asio::io_service::strand is used to serialize server side event handlers in thread pool. The strand wrapper eliminates the need of explicitly synchronize and locking event handlers in thread pool.
 
 The chat room can perform the following functions:
 1.	Broadcast each new chat message to all participants in the same room.
